@@ -1,0 +1,7 @@
+sources:
+  - Core/UseCases
+  - Core/Templates/Templates.swift
+templates:
+  - Core/Templates
+output:
+  Core/Generated

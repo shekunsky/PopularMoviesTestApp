@@ -1,0 +1,15 @@
+{% for type in types.protocol.implementing.AutoUseCaseProvider %}
+{% if type.name|contains:"UseCase" %}
+  public protocol Has{{type.name|upperFirstLetter}} {
+      var {{type.name|replace:"UseCase",""|lowerFirstLetter}}: {{type.name}} { get }
+  }
+{% endif %}
+{% endfor %}
+
+public typealias UseCases =
+    {% for type in types.implementing.AutoUseCaseProvider %}
+    {% if type.name|contains:"UseCase" %}
+    Has{{type.name|upperFirstLetter}}{% if not forloop.last %} &
+    {% endif %}
+    {% endif %}{% endfor %}
+public protocol UseCasesProvider: UseCases {}
