@@ -18,18 +18,37 @@ public enum Environment {
         switch self {
         case .development(let mode):
             if mode == ExecuteMode.test {
-                return "http://[::1]:8080"
+                return "https://api.themoviedb.org/3/movie/popular?api_key=f2e5303a9c0817268cbce5beff650077&language=en-US&page="
             } else {
-                return "https://api.github.com"
+                return "https://api.themoviedb.org/3/movie/popular?api_key=f2e5303a9c0817268cbce5beff650077&language=en-US&page="
             }
         case .stage(let mode):
             if mode == ExecuteMode.test {
-                return "http://[::1]:8080"
+                return "https://api.themoviedb.org/3/movie/popular?api_key=f2e5303a9c0817268cbce5beff650077&language=en-US&page="
             } else {
-                return "https://api.github.com"
+                return "https://api.themoviedb.org/3/movie/popular?api_key=f2e5303a9c0817268cbce5beff650077&language=en-US&page="
             }
         case .production:
-            return "https://api.github.com"
+            return "https://api.themoviedb.org/3/movie/popular?api_key=f2e5303a9c0817268cbce5beff650077&language=en-US&page="
+        }
+    }
+    
+    var imagesURLAddress: String {
+        switch self {
+        case .development(let mode):
+            if mode == ExecuteMode.test {
+                return "https://image.tmdb.org/t/p/original"
+            } else {
+                return "https://image.tmdb.org/t/p/original"
+            }
+        case .stage(let mode):
+            if mode == ExecuteMode.test {
+                return "https://image.tmdb.org/t/p/original"
+            } else {
+                return "https://image.tmdb.org/t/p/original"
+            }
+        case .production:
+            return "https://image.tmdb.org/t/p/original"
         }
     }
     

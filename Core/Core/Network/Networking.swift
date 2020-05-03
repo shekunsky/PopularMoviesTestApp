@@ -6,8 +6,9 @@
 //  Copyright © 2020 Alex2. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol Networking {
-    func getItems<T: Decodable>(_ path: String, parameters: [String: Any]) -> [T]
+    func getPopularMovies(for page: Int, complition: @escaping ([PopularMovie]?) -> Void)
+    func fullPathToImageFrom(path: String?) -> String?
 }

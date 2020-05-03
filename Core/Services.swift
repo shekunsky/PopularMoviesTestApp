@@ -13,14 +13,15 @@ final public class Services: UseCasesProvider {
    private let context: Context
 
     // Services
-    private lazy var moviesService = MoviesService()
+    private lazy var moviesService = MoviesService(context: context)
 
     // Services Gateways
     public var movies: MoviesUseCase { return moviesService }
 
     public init(environment: Environment) {
         Services.setupServices(environment: environment)
-        let network = Network(environment.baseURLAddress)
+        let network = Network(apiEndPoint: environment.baseURLAddress,
+                              imagesEndPoint: environment.imagesURLAddress)
         let database = Database(configuration: .defaultConfiguration)
         self.context = Context(environment: environment,
                                networking: network,

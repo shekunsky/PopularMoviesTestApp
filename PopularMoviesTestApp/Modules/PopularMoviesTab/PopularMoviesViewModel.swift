@@ -8,11 +8,32 @@
 
 import Core
 
-final class PopularMoviesViewModel: ViewModel, UseCasesConsumer {
+protocol PopularMoviesOperable {
+    func getPopularMovies()
+    func setup(cell: PopularMovieTableViewCell, for indexPath: IndexPath, isPreloading: Bool)
+    var popularMovies: [PopularMovie] { get set }
+    var moviesForCurrentPage: [PopularMovie]? { get set }
+    var fetchFailed: (()->())? { get set }
+    var onFetchCompleted: (([IndexPath]?)->())? { get set }
+    var maxMoviesToDownload: Int { get }
+}
+
+final class PopularMoviesViewModel: ViewModel, PopularMoviesOperable, UseCasesConsumer {
     typealias UseCases = HasMoviesUseCase
 
-    var coordinator: PopularMoviesCoordinator?
-    var popularMovies: [PopularMovies]?
+    //MARK: - Vars
+    private var isFetchInProgress = false
+    private var coordinator: PopularMoviesCoordinator?
+    private var currentPage: Int = 0
+    var popularMovies: [PopularMovie] = []
+    var moviesForCurrentPage: [PopularMovie]? {
+        didSet {
+            popularMovies.append(contentsOf: moviesForCurrentPage ?? [])
+        }
+    }
+    var fetchFailed: (()->())?
+    var onFetchCompleted: (([IndexPath]?)->())?
+    let maxMoviesToDownload = 10000
 
     convenience init(useCases: UseCases, coordinator: PopularMoviesCoordinator) {
         self.init()
@@ -23,5 +44,50 @@ final class PopularMoviesViewModel: ViewModel, UseCasesConsumer {
 
     private func setup() {
 
+    }
+    
+    func getPopularMovies() {
+        guard !isFetchInProgress else { return }
+        
+        isFetchInProgress = true
+        currentPage += 1
+        useCases.movies.getPopularMoviesList(for: currentPage) { [weak self] (result) in
+            
+            guard let loadedMovies = result else {
+                DispatchQueue.main.async {
+                    self?.isFetchInProgress = false
+                    self?.fetchFailed?()
+                    self?.currentPage -= 1
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                self?.moviesForCurrentPage = loadedMovies
+                self?.isFetchInProgress = false
+                if self?.currentPage ?? 0  > 1 {
+                    let indexPathsToReload = self?.calculateIndexPathsToReload(from: loadedMovies)
+                    self?.onFetchCompleted?(indexPathsToReload)
+                } else {
+                    self?.onFetchCompleted?(nil)
+                }
+            }
+        }
+    }
+    
+    func setup(cell: PopularMovieTableViewCell, for indexPath: IndexPath, isPreloading: Bool) {
+        guard indexPath.row < popularMovies.count else { return }
+        let movie = popularMovies[indexPath.row]
+        let posterPath = useCases.movies.fullPathToImageFrom(path: movie.poster_path)
+        cell.setupWith(posterPath: posterPath,
+                       title: movie.title,
+                       description: movie.overview,
+                       isPreloading: isPreloading)
+        
+    }
+    
+    private func calculateIndexPathsToReload(from newMovies: [PopularMovie]) -> [IndexPath] {
+      let startIndex = popularMovies.count - newMovies.count
+      let endIndex = startIndex + newMovies.count
+      return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
 }

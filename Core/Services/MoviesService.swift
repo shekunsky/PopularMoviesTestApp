@@ -6,10 +6,21 @@
 //  Copyright © 2020 Alex2. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-final class MoviesService: MoviesUseCase {
-    func getPopularMoviesList() {
-        
+final class MoviesService: NSObject, MoviesUseCase {
+    let network: Networking
+    public init (context: Context) {
+        network = context.networking
+        super.init()
+    }
+    func getPopularMoviesList(for page: Int, complition: @escaping ([PopularMovie]?) -> Void) {
+        network.getPopularMovies(for: page) { (response) in
+            complition(response)
+        }
+    }
+
+    func fullPathToImageFrom(path: String?) -> String? {
+        return network.fullPathToImageFrom(path: path)
     }
 }

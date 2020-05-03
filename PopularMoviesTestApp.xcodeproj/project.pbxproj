@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */; };
+		3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */; };
+		3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */; };
 		3B3AABB6244DB23F00ADDDDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3AABB5244DB23F00ADDDDB /* AppDelegate.swift */; };
 		3B3AABBF244DB23F00ADDDDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AABBD244DB23F00ADDDDB /* Main.storyboard */; };
 		3B3AABC1244DB24A00ADDDDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AABC0244DB24A00ADDDDB /* Assets.xcassets */; };
@@ -29,7 +32,7 @@
 		3B5B34B92455A231004B599A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34B82455A231004B599A /* ViewModel.swift */; };
 		3B5B34BB2455A2B9004B599A /* UseCasesConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34BA2455A2B9004B599A /* UseCasesConsumer.swift */; };
 		3B5B34BD2455A311004B599A /* NSObject+AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34BC2455A311004B599A /* NSObject+AssociatedObject.swift */; };
-		3B5B34C02455A3D1004B599A /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34BF2455A3D1004B599A /* PopularMovies.swift */; };
+		3B5B34C02455A3D1004B599A /* PopularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34BF2455A3D1004B599A /* PopularMovie.swift */; };
 		3B5B34C52455A596004B599A /* FaforiteMoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34C22455A596004B599A /* FaforiteMoviesCoordinator.swift */; };
 		3B5B34C62455A596004B599A /* FaforiteMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34C32455A596004B599A /* FaforiteMoviesViewModel.swift */; };
 		3B5B34C72455A596004B599A /* FaforiteMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B34C42455A596004B599A /* FaforiteMoviesViewController.swift */; };
@@ -106,6 +109,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
+		3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieTableViewCell.xib; sourceTree = "<group>"; };
+		3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		3B3AABB2244DB23F00ADDDDB /* PopularMoviesTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMoviesTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3AABB5244DB23F00ADDDDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3AABBE244DB23F00ADDDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,7 +136,7 @@
 		3B5B34B82455A231004B599A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3B5B34BA2455A2B9004B599A /* UseCasesConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesConsumer.swift; sourceTree = "<group>"; };
 		3B5B34BC2455A311004B599A /* NSObject+AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+AssociatedObject.swift"; sourceTree = "<group>"; };
-		3B5B34BF2455A3D1004B599A /* PopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovies.swift; sourceTree = "<group>"; };
+		3B5B34BF2455A3D1004B599A /* PopularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovie.swift; sourceTree = "<group>"; };
 		3B5B34C22455A596004B599A /* FaforiteMoviesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaforiteMoviesCoordinator.swift; sourceTree = "<group>"; };
 		3B5B34C32455A596004B599A /* FaforiteMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaforiteMoviesViewModel.swift; sourceTree = "<group>"; };
 		3B5B34C42455A596004B599A /* FaforiteMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaforiteMoviesViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 				3BD352CC244E19A000464A07 /* Realm.framework in Frameworks */,
 				3B3AABD7244DB41200ADDDDB /* Core.framework in Frameworks */,
 				3BD352CF244E19A400464A07 /* RealmSwift.framework in Frameworks */,
+				3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */,
 				3BD352DA244E1B2100464A07 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2F49C3245CC8B2008C6BD4 /* PopularMovieTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */,
+				3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */,
+			);
+			path = PopularMovieTableViewCell;
+			sourceTree = "<group>";
+		};
 		3B3AABA9244DB23F00ADDDDB = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5B34AE24559F9E004B599A /* PopularMoviesCoordinator.swift */,
+				3B2F49C3245CC8B2008C6BD4 /* PopularMovieTableViewCell */,
 				3B5B34B42455A0E2004B599A /* PopularMoviesViewController.swift */,
 				3B5B34B62455A171004B599A /* PopularMoviesViewModel.swift */,
 			);
@@ -269,7 +286,7 @@
 		3B5B34BE2455A3B8004B599A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B5B34BF2455A3D1004B599A /* PopularMovies.swift */,
+				3B5B34BF2455A3D1004B599A /* PopularMovie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +387,7 @@
 		3BD352CA244E19A000464A07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */,
 				3B5B34C82455AA44004B599A /* UIWindowTransitions.framework */,
 				3BD352D7244E1B1500464A07 /* Alamofire.framework */,
 				3BD352CE244E19A400464A07 /* RealmSwift.framework */,
@@ -504,6 +522,7 @@
 			files = (
 				3BD352C9244E15E300464A07 /* Cartfile in Resources */,
 				3B3AABC4244DB24A00ADDDDB /* LaunchScreen.storyboard in Resources */,
+				3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */,
 				3B3AABC1244DB24A00ADDDDB /* Assets.xcassets in Resources */,
 				3B3AABBF244DB23F00ADDDDB /* Main.storyboard in Resources */,
 				3BD35287244DBD2200464A07 /* .sourcery.yml in Resources */,
@@ -552,6 +571,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UIWindowTransitions.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = carthage;
 			outputFileListPaths = (
@@ -579,6 +599,7 @@
 				3B5B347B245595B4004B599A /* AppCoordinator.swift in Sources */,
 				3B5B34B124559FFF004B599A /* TabBaseCoordinator.swift in Sources */,
 				3B5B34B92455A231004B599A /* ViewModel.swift in Sources */,
+				3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */,
 				3B5B34C72455A596004B599A /* FaforiteMoviesViewController.swift in Sources */,
 				3B5B34CC2455ABA2004B599A /* Makeable.swift in Sources */,
 				3B5B347D24559758004B599A /* NavigationCoordinator.swift in Sources */,
@@ -606,7 +627,7 @@
 				3BD35293244DC08E00464A07 /* Context.swift in Sources */,
 				3BD352A4244DF3B500464A07 /* AutoUseCaseProvider.generated.swift in Sources */,
 				3B3AABE1244DB5A600ADDDDB /* Templates.swift in Sources */,
-				3B5B34C02455A3D1004B599A /* PopularMovies.swift in Sources */,
+				3B5B34C02455A3D1004B599A /* PopularMovie.swift in Sources */,
 				3BD352C0244E13CA00464A07 /* Networking.swift in Sources */,
 				3BD352E6244E1C1B00464A07 /* Tag.swift in Sources */,
 			);
@@ -692,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -746,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -768,7 +789,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PopularMoviesTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,7 +813,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PopularMoviesTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

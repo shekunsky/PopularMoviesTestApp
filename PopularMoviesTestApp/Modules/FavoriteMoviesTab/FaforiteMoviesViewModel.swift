@@ -12,7 +12,7 @@ final class FavoriteMoviesViewModel: ViewModel, UseCasesConsumer {
     typealias UseCases = HasMoviesUseCase
 
     var coordinator: FaforiteMoviesCoordinator?
-    var favoriteMovies: [PopularMovies]?
+    var favoriteMovies: [PopularMovie]?
 
     convenience init(useCases: UseCases, coordinator: FaforiteMoviesCoordinator) {
         self.init()
