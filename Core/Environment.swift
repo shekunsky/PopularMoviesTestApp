@@ -52,6 +52,24 @@ public enum Environment {
         }
     }
     
+    var thumbnailURLAddress: String {
+        switch self {
+        case .development(let mode):
+            if mode == ExecuteMode.test {
+                return "https://image.tmdb.org/t/p/w200"
+            } else {
+                return "https://image.tmdb.org/t/p/w200"
+            }
+        case .stage(let mode):
+            if mode == ExecuteMode.test {
+                return "https://image.tmdb.org/t/p/w200"
+            } else {
+                return "https://image.tmdb.org/t/p/w200"
+            }
+        case .production:
+            return "https://image.tmdb.org/t/p/w200"
+        }
+    }
     public enum ExecuteMode {
         case normal
         case test

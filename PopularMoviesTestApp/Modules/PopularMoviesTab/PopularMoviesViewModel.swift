@@ -77,8 +77,8 @@ final class PopularMoviesViewModel: ViewModel, PopularMoviesOperable, UseCasesCo
     func setup(cell: PopularMovieTableViewCell, for indexPath: IndexPath, isPreloading: Bool) {
         guard indexPath.row < popularMovies.count else { return }
         let movie = popularMovies[indexPath.row]
-        let posterPath = useCases.movies.fullPathToImageFrom(path: movie.poster_path)
-        cell.setupWith(posterPath: posterPath,
+        let thumbnailPath = useCases.movies.fullPathToThumbnailFrom(path: movie.poster_path)
+        cell.setupWith(posterPath: thumbnailPath,
                        title: movie.title,
                        description: movie.overview,
                        isPreloading: isPreloading)

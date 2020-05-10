@@ -11,4 +11,5 @@ import UIKit
 public protocol MoviesUseCase: AutoUseCaseProvider {
     func getPopularMoviesList(for page: Int, complition: @escaping ([PopularMovie]?) -> Void)
     func fullPathToImageFrom(path: String?) -> String?
+    func fullPathToThumbnailFrom(path: String?) -> String?
 }

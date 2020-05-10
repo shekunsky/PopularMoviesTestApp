@@ -13,11 +13,14 @@ final class Network: Networking {
     
     private let apiEndPoint: String
     private let imagesEndPoint: String
+    private let thumbnailsEndPoint: String
     
     init(apiEndPoint: String,
-         imagesEndPoint: String) {
+         imagesEndPoint: String,
+         thumbnailsEndPoint: String) {
         self.apiEndPoint = apiEndPoint
         self.imagesEndPoint = imagesEndPoint
+        self.thumbnailsEndPoint = thumbnailsEndPoint
     }
 
     func getPopularMovies(for page: Int, complition: @escaping ([PopularMovie]?) -> Void) {
@@ -35,5 +38,10 @@ final class Network: Networking {
     func fullPathToImageFrom(path: String?) -> String? {
         guard let endPath = path else { return nil }
         return  "\(imagesEndPoint)\(endPath)"
+    }
+    
+    func fullPathToThumbnailFrom(path: String?) -> String? {
+        guard let endPath = path else { return nil }
+        return  "\(thumbnailsEndPoint)\(endPath)"
     }
 }

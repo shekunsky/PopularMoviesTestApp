@@ -23,4 +23,8 @@ final class MoviesService: NSObject, MoviesUseCase {
     func fullPathToImageFrom(path: String?) -> String? {
         return network.fullPathToImageFrom(path: path)
     }
+    
+    func fullPathToThumbnailFrom(path: String?) -> String? {
+        return network.fullPathToThumbnailFrom(path: path)
+    }
 }

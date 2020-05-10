@@ -21,7 +21,8 @@ final public class Services: UseCasesProvider {
     public init(environment: Environment) {
         Services.setupServices(environment: environment)
         let network = Network(apiEndPoint: environment.baseURLAddress,
-                              imagesEndPoint: environment.imagesURLAddress)
+                              imagesEndPoint: environment.imagesURLAddress,
+                              thumbnailsEndPoint: environment.thumbnailURLAddress)
         let database = Database(configuration: .defaultConfiguration)
         self.context = Context(environment: environment,
                                networking: network,
