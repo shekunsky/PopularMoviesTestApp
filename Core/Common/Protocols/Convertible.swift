@@ -17,7 +17,5 @@ protocol EntityConvertible {
 protocol ModelConvertible {
     associatedtype ModelType: EntityConvertible
     
-    var identifier: Int { get }
-
     func asModel() -> ModelType
 }

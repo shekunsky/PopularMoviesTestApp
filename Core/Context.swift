@@ -12,7 +12,7 @@ final class Context {
     
     let environment: Environment
     let networking: Networking
-    let database: AbstractDatabase
+    let database: FavoriteMoviesOperable
     
     init(environment: Environment,
          networking: Networking,

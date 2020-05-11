@@ -18,25 +18,33 @@ class PopularMovieTableViewCell: UITableViewCell {
     @IBOutlet private weak var favoriteButton: UIButton!
     @IBOutlet private weak var spinner: UIActivityIndicatorView!
     
+    var favoriteAction: (()->())?
+    let favoriteColor: UIColor = .systemBlue
+    let commonColor: UIColor = .gray
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
         posterImageView.image = nil
         titleLabel.text = ""
         descriptionLabel.text = ""
+        favoriteButton.tintColor = commonColor
         setPreloadingMode(true)
     }
     
     @IBAction func favoritePressed(_ sender: Any) {
-        
+        favoriteAction?()
+        favoriteButton.tintColor = (favoriteButton.tintColor == favoriteColor) ? commonColor : favoriteColor
     }
     
     func setupWith(posterPath: String?,
                    title: String?,
                    description: String?,
                    isFavorite: Bool = false,
-                   isPreloading: Bool = false) {
+                   isPreloading: Bool = false,
+                   favoriteAction: @escaping ()->()) {
         
+        self.favoriteAction = favoriteAction
         setPreloadingMode(isPreloading)
         if let url = URL(string: posterPath ?? "") {
             let resource = ImageResource(downloadURL: url, cacheKey: posterPath)
@@ -48,7 +56,7 @@ class PopularMovieTableViewCell: UITableViewCell {
 
         titleLabel.text = title
         descriptionLabel.text = description
-        favoriteButton.tintColor = isFavorite ? .yellow : .gray
+        favoriteButton.tintColor = isFavorite ? favoriteColor : commonColor
     }
     
     private func setPreloadingMode(_ isPreloading: Bool) {

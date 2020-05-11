@@ -81,7 +81,16 @@ final class PopularMoviesViewModel: ViewModel, PopularMoviesOperable, UseCasesCo
         cell.setupWith(posterPath: thumbnailPath,
                        title: movie.title,
                        description: movie.overview,
-                       isPreloading: isPreloading)
+                       isFavorite: useCases.movies.checkIsFavoriteMovie(id: movie.id ?? 0),
+                       isPreloading: isPreloading) { [weak self] in
+                        
+                        //favoriteAction
+                        if self?.useCases.movies.checkIsFavoriteMovie(id: movie.id ?? 0) ?? false {
+                            self?.useCases.movies.deleteFromFavorites(movie: movie)
+                        } else {
+                            self?.useCases.movies.addToFavorites(movie: movie)
+                        }
+        }
         
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2CE4B324694CEC0026C0C3 /* RMPopularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */; };
+		3B2CE4B624694F740026C0C3 /* Realm+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */; };
 		3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */; };
 		3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */; };
 		3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */; };
@@ -109,6 +111,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMPopularMovie.swift; sourceTree = "<group>"; };
+		3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extensions.swift"; sourceTree = "<group>"; };
 		3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
 		3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieTableViewCell.xib; sourceTree = "<group>"; };
 		3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -190,6 +194,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2CE4B424694D480026C0C3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B34BF2455A3D1004B599A /* PopularMovie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3B2CE4B724694FDB0026C0C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3B2F49C3245CC8B2008C6BD4 /* PopularMovieTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +261,7 @@
 				3BD35290244DC08E00464A07 /* Context.swift */,
 				3BD35291244DC08E00464A07 /* Environment.swift */,
 				3BD3528F244DC08E00464A07 /* Services.swift */,
+				3B2CE4B424694D480026C0C3 /* Entities */,
 				3B5B34BE2455A3B8004B599A /* Models */,
 				3BD352DC244E1C1A00464A07 /* Common */,
 				3BD352A5244E13CA00464A07 /* Core */,
@@ -286,7 +307,7 @@
 		3B5B34BE2455A3B8004B599A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B5B34BF2455A3D1004B599A /* PopularMovie.swift */,
+				3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +392,7 @@
 			children = (
 				3BD352A7244E13CA00464A07 /* AbstractDatabase.swift */,
 				3BD352AB244E13CA00464A07 /* Database.swift */,
+				3B2CE4B724694FDB0026C0C3 /* Extensions */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -621,6 +643,7 @@
 				3BD352E4244E1C1B00464A07 /* Services+External.swift in Sources */,
 				3BD352C1244E13CA00464A07 /* Network.swift in Sources */,
 				3BD35294244DC08E00464A07 /* Environment.swift in Sources */,
+				3B2CE4B624694F740026C0C3 /* Realm+Extensions.swift in Sources */,
 				3BD352E8244E1C1B00464A07 /* Convertible.swift in Sources */,
 				3BD35292244DC08E00464A07 /* Services.swift in Sources */,
 				3B5B34BB2455A2B9004B599A /* UseCasesConsumer.swift in Sources */,
@@ -628,6 +651,7 @@
 				3BD352A4244DF3B500464A07 /* AutoUseCaseProvider.generated.swift in Sources */,
 				3B3AABE1244DB5A600ADDDDB /* Templates.swift in Sources */,
 				3B5B34C02455A3D1004B599A /* PopularMovie.swift in Sources */,
+				3B2CE4B324694CEC0026C0C3 /* RMPopularMovie.swift in Sources */,
 				3BD352C0244E13CA00464A07 /* Networking.swift in Sources */,
 				3BD352E6244E1C1B00464A07 /* Tag.swift in Sources */,
 			);

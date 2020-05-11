@@ -29,6 +29,10 @@ class PopularMoviesViewController: TabBarBaseViewController, StoryboardMakeable 
         viewModel.getPopularMovies()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func setupTable() {
         tableView.register(UINib(nibName: tableCellReuseIdentifier,
                                  bundle: Bundle(for: PopularMovieTableViewCell.self)),

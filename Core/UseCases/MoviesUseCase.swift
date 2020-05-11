@@ -9,7 +9,14 @@
 import UIKit
 
 public protocol MoviesUseCase: AutoUseCaseProvider {
+    //Network
     func getPopularMoviesList(for page: Int, complition: @escaping ([PopularMovie]?) -> Void)
     func fullPathToImageFrom(path: String?) -> String?
     func fullPathToThumbnailFrom(path: String?) -> String?
+    
+    //Database
+    func checkIsFavoriteMovie(id: Int) -> Bool
+    func addToFavorites(movie: PopularMovie)
+    func deleteFromFavorites(movie: PopularMovie)
+    func getFavoriteMovies() -> [PopularMovie]
 }

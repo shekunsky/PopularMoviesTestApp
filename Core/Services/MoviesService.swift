@@ -10,8 +10,11 @@ import UIKit
 
 final class MoviesService: NSObject, MoviesUseCase {
     let network: Networking
+    let database: FavoriteMoviesOperable
+    
     public init (context: Context) {
         network = context.networking
+        database = context.database
         super.init()
     }
     func getPopularMoviesList(for page: Int, complition: @escaping ([PopularMovie]?) -> Void) {
@@ -26,5 +29,19 @@ final class MoviesService: NSObject, MoviesUseCase {
     
     func fullPathToThumbnailFrom(path: String?) -> String? {
         return network.fullPathToThumbnailFrom(path: path)
+    }
+    
+    func checkIsFavoriteMovie(id: Int) -> Bool {
+        database .checkIsFavoriteMovie(id: id)
+    }
+    
+    func addToFavorites(movie: PopularMovie) {
+        database.addToFavorites(movie: movie)
+    }
+    func deleteFromFavorites(movie: PopularMovie) {
+        database.deleteFromFavorites(movie: movie)
+    }
+    func getFavoriteMovies() -> [PopularMovie] {
+        database.getFavoriteMovies()
     }
 }
