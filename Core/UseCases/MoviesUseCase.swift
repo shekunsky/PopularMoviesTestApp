@@ -19,4 +19,5 @@ public protocol MoviesUseCase: AutoUseCaseProvider {
     func addToFavorites(movie: PopularMovie)
     func deleteFromFavorites(movie: PopularMovie)
     func getFavoriteMovies() -> [PopularMovie]
+    func numberOfFavoriteMovies() -> Int
 }

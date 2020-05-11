@@ -34,7 +34,6 @@ final class MoviesService: NSObject, MoviesUseCase {
     func checkIsFavoriteMovie(id: Int) -> Bool {
         database .checkIsFavoriteMovie(id: id)
     }
-    
     func addToFavorites(movie: PopularMovie) {
         database.addToFavorites(movie: movie)
     }
@@ -43,5 +42,8 @@ final class MoviesService: NSObject, MoviesUseCase {
     }
     func getFavoriteMovies() -> [PopularMovie] {
         database.getFavoriteMovies()
+    }
+    func numberOfFavoriteMovies() -> Int {
+        database.numberOfFavoriteMovies()
     }
 }

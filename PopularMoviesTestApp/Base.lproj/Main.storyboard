@@ -52,21 +52,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Favorite Movies" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="86.5" y="426.5" width="241" height="43"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KQl-tD-oY1">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zsZ-a5-HoO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="KQl-tD-oY1" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="KIp-kp-qZb"/>
+                            <constraint firstAttribute="trailing" secondItem="zsZ-a5-HoO" secondAttribute="trailing" id="Nky-OT-q4q"/>
+                            <constraint firstItem="zsZ-a5-HoO" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Q12-aY-jwo"/>
+                            <constraint firstAttribute="bottom" secondItem="zsZ-a5-HoO" secondAttribute="bottom" id="ZvI-ep-Cqj"/>
+                            <constraint firstItem="zsZ-a5-HoO" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="gkS-WC-wep"/>
+                            <constraint firstItem="KQl-tD-oY1" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="xUn-q2-vfK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="star.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="spinner" destination="KQl-tD-oY1" id="cmW-nz-fVu"/>
+                        <outlet property="tableView" destination="zsZ-a5-HoO" id="usI-DK-wQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

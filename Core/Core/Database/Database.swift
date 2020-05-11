@@ -15,6 +15,7 @@ protocol FavoriteMoviesOperable: AbstractDatabase {
     func addToFavorites(movie: PopularMovie)
     func deleteFromFavorites(movie: PopularMovie)
     func getFavoriteMovies() -> [PopularMovie]
+    func numberOfFavoriteMovies() -> Int
 }
 
 final class Database: FavoriteMoviesOperable {
@@ -24,7 +25,6 @@ final class Database: FavoriteMoviesOperable {
     }
     init(configuration: Realm.Configuration) {
         self.configuration = configuration
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     func truncateDatabase() {
@@ -68,8 +68,19 @@ final class Database: FavoriteMoviesOperable {
             realm.delete(movieToDelete)
         }
     }
-    public func getFavoriteMovies() -> [PopularMovie]{
-        return queryAll()
+    public func getFavoriteMovies() -> [PopularMovie] {
+        let popularMovies: [PopularMovie] = queryAll()
+        return popularMovies.sorted {
+            var isSorted = false
+            if let first = $0.title?.lowercased(), let second = $1.title?.lowercased() {
+                isSorted = first < second
+            }
+            return isSorted
+        }
+    }
+    public func numberOfFavoriteMovies() -> Int {
+        let faforiteMovies = getFavoriteMovies()
+        return faforiteMovies.count
     }
 }
 

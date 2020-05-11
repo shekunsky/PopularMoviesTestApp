@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B2CE4B324694CEC0026C0C3 /* RMPopularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */; };
 		3B2CE4B624694F740026C0C3 /* Realm+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */; };
+		3B2CE4B9246980680026C0C3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B8246980680026C0C3 /* BaseViewModel.swift */; };
 		3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */; };
 		3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */; };
 		3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */; };
@@ -113,6 +114,7 @@
 /* Begin PBXFileReference section */
 		3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMPopularMovie.swift; sourceTree = "<group>"; };
 		3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extensions.swift"; sourceTree = "<group>"; };
+		3B2CE4B8246980680026C0C3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
 		3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieTableViewCell.xib; sourceTree = "<group>"; };
 		3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -296,8 +298,8 @@
 		3B5B34AD24559F7C004B599A /* PopularMoviesTab */ = {
 			isa = PBXGroup;
 			children = (
-				3B5B34AE24559F9E004B599A /* PopularMoviesCoordinator.swift */,
 				3B2F49C3245CC8B2008C6BD4 /* PopularMovieTableViewCell */,
+				3B5B34AE24559F9E004B599A /* PopularMoviesCoordinator.swift */,
 				3B5B34B42455A0E2004B599A /* PopularMoviesViewController.swift */,
 				3B5B34B62455A171004B599A /* PopularMoviesViewModel.swift */,
 			);
@@ -330,6 +332,7 @@
 				3B5B34B024559FFF004B599A /* TabBaseCoordinator.swift */,
 				3B5B34B22455A057004B599A /* TabBarBaseViewController.swift */,
 				3B5B347C24559758004B599A /* NavigationCoordinator.swift */,
+				3B2CE4B8246980680026C0C3 /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				3B5B34C52455A596004B599A /* FaforiteMoviesCoordinator.swift in Sources */,
 				3B5B348B24559BC2004B599A /* StoryboardMakeable.swift in Sources */,
 				3B5B348A24559BC2004B599A /* Storyboards.swift in Sources */,
+				3B2CE4B9246980680026C0C3 /* BaseViewModel.swift in Sources */,
 				3B5B34B72455A171004B599A /* PopularMoviesViewModel.swift in Sources */,
 				3B5B34B32455A057004B599A /* TabBarBaseViewController.swift in Sources */,
 				3B5B347B245595B4004B599A /* AppCoordinator.swift in Sources */,

@@ -9,18 +9,22 @@
 import UIKit
 
 class FavoriteMoviesViewController: TabBarBaseViewController, StoryboardMakeable {
-
-    // MARK: Outlets
-
-    // MARK: Vars
-    var viewModel: FavoriteMoviesViewModel!
-
-    // MARK: Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.getPopularMovies()
+    }
+    
+    override func bindViewModel() {
+        viewModel.reloadTable = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
+        viewModel.onFetchCompleted = { [weak self] newIndexPathsToReload in
+            self?.spinner.stopAnimating()
+            self?.tableView.isHidden = false
+            self?.tableView.reloadData()
+            
+        }
     }
 }
