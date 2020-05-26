@@ -24,7 +24,6 @@ class FavoriteMoviesViewController: TabBarBaseViewController, StoryboardMakeable
             self?.spinner.stopAnimating()
             self?.tableView.isHidden = false
             self?.tableView.reloadData()
-            
         }
     }
 }

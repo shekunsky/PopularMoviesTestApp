@@ -86,11 +86,11 @@ final class Database: FavoriteMoviesOperable {
 
 extension Results {
     public func toAnyCollection() -> AnyRealmCollection<Element> {
-        return AnyRealmCollection<ElementType>(self)
+        AnyRealmCollection<ElementType>(self)
     }
 
     public typealias ElementType = Element
     public func toArray() -> [Element] {
-        return Array(self)
+        Array(self)
     }
 }

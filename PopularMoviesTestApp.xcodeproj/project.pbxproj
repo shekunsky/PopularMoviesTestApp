@@ -13,6 +13,8 @@
 		3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */; };
 		3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */; };
 		3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */; };
+		3B32B5312477296D0061461F /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32B5302477296D0061461F /* DetailsScreenViewController.swift */; };
+		3B32B5332477297E0061461F /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32B5322477297E0061461F /* DetailsScreenViewModel.swift */; };
 		3B3AABB6244DB23F00ADDDDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3AABB5244DB23F00ADDDDB /* AppDelegate.swift */; };
 		3B3AABBF244DB23F00ADDDDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AABBD244DB23F00ADDDDB /* Main.storyboard */; };
 		3B3AABC1244DB24A00ADDDDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AABC0244DB24A00ADDDDB /* Assets.xcassets */; };
@@ -118,6 +120,8 @@
 		3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
 		3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieTableViewCell.xib; sourceTree = "<group>"; };
 		3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		3B32B5302477296D0061461F /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		3B32B5322477297E0061461F /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
 		3B3AABB2244DB23F00ADDDDB /* PopularMoviesTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMoviesTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3AABB5244DB23F00ADDDDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3AABBE244DB23F00ADDDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,6 +223,15 @@
 				3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */,
 			);
 			path = PopularMovieTableViewCell;
+			sourceTree = "<group>";
+		};
+		3B32B52F247728D60061461F /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3B32B5302477296D0061461F /* DetailsScreenViewController.swift */,
+				3B32B5322477297E0061461F /* DetailsScreenViewModel.swift */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		3B3AABA9244DB23F00ADDDDB = {
@@ -352,6 +365,7 @@
 			children = (
 				3B5B34AD24559F7C004B599A /* PopularMoviesTab */,
 				3B5B34C12455A596004B599A /* FavoriteMoviesTab */,
+				3B32B52F247728D60061461F /* DetailsScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -619,6 +633,7 @@
 				3B5B34C52455A596004B599A /* FaforiteMoviesCoordinator.swift in Sources */,
 				3B5B348B24559BC2004B599A /* StoryboardMakeable.swift in Sources */,
 				3B5B348A24559BC2004B599A /* Storyboards.swift in Sources */,
+				3B32B5332477297E0061461F /* DetailsScreenViewModel.swift in Sources */,
 				3B2CE4B9246980680026C0C3 /* BaseViewModel.swift in Sources */,
 				3B5B34B72455A171004B599A /* PopularMoviesViewModel.swift in Sources */,
 				3B5B34B32455A057004B599A /* TabBarBaseViewController.swift in Sources */,
@@ -630,6 +645,7 @@
 				3B5B34CC2455ABA2004B599A /* Makeable.swift in Sources */,
 				3B5B347D24559758004B599A /* NavigationCoordinator.swift in Sources */,
 				3B3AABB6244DB23F00ADDDDB /* AppDelegate.swift in Sources */,
+				3B32B5312477296D0061461F /* DetailsScreenViewController.swift in Sources */,
 				3B5B34AF24559F9E004B599A /* PopularMoviesCoordinator.swift in Sources */,
 				3B5B34B52455A0E2004B599A /* PopularMoviesViewController.swift in Sources */,
 			);

@@ -25,9 +25,8 @@ public class RMPopularMovie: Object {
     public dynamic var video: Bool = false
     public dynamic var vote_average: Float = .zero
     
-    override public class func primaryKey() -> String? { return #keyPath(id) }
+    override public class func primaryKey() -> String? { #keyPath(id) }
 }
-
 
 extension RMPopularMovie: EntityConvertible {
     func asEntity() -> PopularMovie {

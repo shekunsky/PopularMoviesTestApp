@@ -18,6 +18,7 @@ final class PopularMoviesViewModel: BaseViewModel {
         } else {
             useCases.movies.addToFavorites(movie: movie)
         }
+        reloadTable?()
     }
     
     override func getPopularMovies() {

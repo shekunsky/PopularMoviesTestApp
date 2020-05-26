@@ -18,7 +18,7 @@ final class FaforiteMoviesCoordinator: TabBaseCoordinator {
 
 extension FaforiteMoviesCoordinator {
     func makeFavoriteMoviesViewController() -> FavoriteMoviesViewController {
-        return makeController(from: .main) {
+        makeController(from: .main) {
             let viewModel = FavoriteMoviesViewModel(useCases: useCases, coordinator: self)
             $0.viewModel = viewModel
         }

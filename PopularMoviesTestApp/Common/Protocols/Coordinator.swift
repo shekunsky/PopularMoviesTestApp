@@ -18,7 +18,7 @@ protocol Coordinator: class {
 
 extension Coordinator {
     func makeController<T: Makeable>() -> T where T.Product == T, T: UIViewController {
-        return T.make()
+        T.make()
     }
     func makeController<T: Makeable>(_ builder: (T.Product) -> Void) -> T where T.Product == T, T: UIViewController {
         let controller: T = T.make(builder)

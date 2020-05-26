@@ -18,7 +18,7 @@ final class PopularMoviesCoordinator: TabBaseCoordinator {
 
 extension PopularMoviesCoordinator {
     func makePopularMoviesViewController() -> PopularMoviesViewController {
-        return makeController(from: .main) {
+        makeController(from: .main) {
             let viewModel = PopularMoviesViewModel(useCases: useCases, coordinator: self)
             $0.viewModel = viewModel
         }

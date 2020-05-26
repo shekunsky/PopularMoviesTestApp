@@ -32,13 +32,13 @@ class TabBarBaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        
+       
         reloadVisibleRows()
     }
     
     func reloadVisibleRows() {
         guard let indexesForReload = tableView.indexPathsForVisibleRows else { return }
-        
+
         tableView.beginUpdates()
         tableView.reloadRows(at: indexesForReload, with: .none)
         tableView.endUpdates()
@@ -66,7 +66,7 @@ class TabBarBaseViewController: UIViewController {
 //MARK: - UITableViewDataSource
 extension TabBarBaseViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.maxMoviesToDownload
+        viewModel.maxMoviesToDownload
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,6 +88,7 @@ extension TabBarBaseViewController: UITableViewDataSource {
 extension TabBarBaseViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.showDetailsForMovie(at: indexPath, from: self)
     }
 }
 
@@ -102,7 +103,7 @@ extension TabBarBaseViewController: UITableViewDataSourcePrefetching {
 
 extension TabBarBaseViewController {
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= viewModel.popularMovies.count
+        indexPath.row >= viewModel.popularMovies.count
     }
     
     func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {

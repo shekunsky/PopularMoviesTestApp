@@ -24,11 +24,11 @@ final class MoviesService: NSObject, MoviesUseCase {
     }
 
     func fullPathToImageFrom(path: String?) -> String? {
-        return network.fullPathToImageFrom(path: path)
+        network.fullPathToImageFrom(path: path)
     }
     
     func fullPathToThumbnailFrom(path: String?) -> String? {
-        return network.fullPathToThumbnailFrom(path: path)
+        network.fullPathToThumbnailFrom(path: path)
     }
     
     func checkIsFavoriteMovie(id: Int) -> Bool {
