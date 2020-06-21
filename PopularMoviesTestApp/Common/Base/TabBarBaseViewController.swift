@@ -40,7 +40,7 @@ class TabBarBaseViewController: UIViewController {
         guard let indexesForReload = tableView.indexPathsForVisibleRows else { return }
 
         tableView.beginUpdates()
-        tableView.reloadRows(at: indexesForReload, with: .none)
+        tableView.reloadRows(at: indexesForReload, with: .fade)
         tableView.endUpdates()
     }
     

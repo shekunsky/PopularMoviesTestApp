@@ -10,6 +10,7 @@
 		3B2CE4B324694CEC0026C0C3 /* RMPopularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */; };
 		3B2CE4B624694F740026C0C3 /* Realm+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */; };
 		3B2CE4B9246980680026C0C3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE4B8246980680026C0C3 /* BaseViewModel.swift */; };
+		3B2EF6AD249F5D03007D847E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B2EF6AC249F5D03007D847E /* README.md */; };
 		3B2F49C1245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */; };
 		3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */; };
 		3B2F49C7245EB926008C6BD4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */; };
@@ -117,6 +118,7 @@
 		3B2CE4B224694CEC0026C0C3 /* RMPopularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMPopularMovie.swift; sourceTree = "<group>"; };
 		3B2CE4B524694F740026C0C3 /* Realm+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extensions.swift"; sourceTree = "<group>"; };
 		3B2CE4B8246980680026C0C3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		3B2EF6AC249F5D03007D847E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3B2F49BF245CC8A7008C6BD4 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
 		3B2F49C0245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieTableViewCell.xib; sourceTree = "<group>"; };
 		3B2F49C6245EB926008C6BD4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		3B3AABA9244DB23F00ADDDDB = {
 			isa = PBXGroup;
 			children = (
+				3B2EF6AC249F5D03007D847E /* README.md */,
 				3B3AABB4244DB23F00ADDDDB /* PopularMoviesTestApp */,
 				3B3AABD1244DB41200ADDDDB /* Core */,
 				3B3AABB3244DB23F00ADDDDB /* Products */,
@@ -562,6 +565,7 @@
 				3BD352C9244E15E300464A07 /* Cartfile in Resources */,
 				3B3AABC4244DB24A00ADDDDB /* LaunchScreen.storyboard in Resources */,
 				3B2F49C2245CC8A7008C6BD4 /* PopularMovieTableViewCell.xib in Resources */,
+				3B2EF6AD249F5D03007D847E /* README.md in Resources */,
 				3B3AABC1244DB24A00ADDDDB /* Assets.xcassets in Resources */,
 				3B3AABBF244DB23F00ADDDDB /* Main.storyboard in Resources */,
 				3BD35287244DBD2200464A07 /* .sourcery.yml in Resources */,
