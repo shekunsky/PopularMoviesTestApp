@@ -1,11 +1,11 @@
 # PopularMovies test application
 
-**This test app was created for demonstration of design patterns implementation.
+*This test app was created for demonstration of design patterns implementation.*
 
 
 ## The Creation Patterns
 
-**BUILDER** pattern 
+**BUILDER** pattern  (in the Realm+Extensions.swift file)
  
 ```swift
     static func build<O: Object>(_ builder: (O) -> () ) -> O {
@@ -14,9 +14,9 @@
         return object
     }
 ```
-in the Realm+Extensions.swift file
 
-**The Factory Method** pattern 
+
+**The Factory Method** pattern  (in the RMPopularMovie.swift file)
 
 ```swift
     func asEntity() -> PopularMovie {
@@ -54,13 +54,12 @@ in the Realm+Extensions.swift file
         }
     }
 ```
-in the RMPopularMovie.swift file
 
 
 
 ## The Structural Patterns
 
-**FACADE** pattern 
+**FACADE** pattern  (in the MoviesService.swift file)
 
 ```swift
     public protocol MoviesUseCase: AutoUseCaseProvider {
@@ -80,18 +79,15 @@ in the RMPopularMovie.swift file
     final class MoviesService: NSObject, MoviesUseCase
 ```
 
-in the MoviesService.swift file
 
 
 ## The Behavioral Patterns
 
-**Template Method** pattern 
+**Template Method** pattern  (in the BaseViewModel.swift file)
 
 ```swift
     func getPopularMovies() { }
 ```
-
-in the BaseViewModel.swift file
 
 
 
